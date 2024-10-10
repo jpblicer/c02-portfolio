@@ -1,28 +1,36 @@
 <container>
   <div class="tab-content" id="pills-tabContent">
-		<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Home Text</div>
-		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Profile Text</div>
-		<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Contact Text</div>
-		<div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">Services Text</div>
-	</div>
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <%= partial 'partials/home' %>
+    </div>
+    
+    <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+      <%= partial 'partials/about' %>
+    </div>
+    
+    <div class="tab-pane fade" id="pills-projects" role="tabpanel" aria-labelledby="pills-projects-tab">
+			<%= partial 'partials/projects' %>
+    </div>
+    
+    <div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab">
+			<%= partial 'partials/services' %>
+    </div>
+  </div>
 
-
-
-<nav class="fixed-bottom bg-body-tertiary">
-	<ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
-		<li class="nav-item" role="presentation">
-			<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-		</li>
-		<li class="nav-item" role="presentation">
-			<button class="nav-link" id="pills-services-tab" data-bs-toggle="pill" data-bs-target="#pills-services" type="button" role="tab" aria-controls="pills-services" aria-selected="false">Services</button>
-		</li>
-	</ul>
-</nav>
-
+  <nav class="fixed-bottom bg-body-tertiary">
+    <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-about-tab" data-bs-toggle="pill" data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about" aria-selected="false">About</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-projects-tab" data-bs-toggle="pill" data-bs-target="#pills-projects" type="button" role="tab" aria-controls="pills-projects" aria-selected="false">Projects</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-services-tab" data-bs-toggle="pill" data-bs-target="#pills-services" type="button" role="tab" aria-controls="pills-services" aria-selected="false">Services</button>
+      </li>
+    </ul>
+  </nav>
 </container>
