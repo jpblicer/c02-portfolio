@@ -1,14 +1,14 @@
 <div class="projects-container d-flex justify-content-evenly vh-100 align-items-center">
     <div class="large-project-container" id="large-project-container" style="position: relative;">
         <%= image_tag "../images/a.jpg", style: "width: 600px; height: 600px; object-fit: cover;" %>
-        <div class="project-card-overlay hidden" id="large-project-container-overlay" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .80); display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <h3> Project Name </h3>
-            <p> Project Details </p>
-            <a href="#" style="text-decoration: none; color: black;">View Project</a>
+        <div class="project-card-overlay hidden" id="large-project-container-overlay" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <h3> Project Name </h3>
+          <p> Project Details </p>
+          <a href="#" style="text-decoration: none; color: black;">View Project</a>
         </div>
     </div>
-    <div class="small-projects-container">
-        <div class="small-projects-container-top d-flex">
+    <div class="small-projects-container" style="position: relative;">
+      <div class="small-projects-container-top d-flex">
             <div class="small-project-top-left">
                 <%= image_tag "../images/b.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
             </div>
@@ -24,5 +24,13 @@
                 <%= image_tag "../images/e.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
             </div>
         </div>
+
+        <div class="project-card-overlay" id="small-projects-container-overlay" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <h3> Small Projects </h3>
+          <p> Overview of Small Projects </p>
+          <a href="#" style="text-decoration: none; color: black;">View All Projects</a>
+        </div>
+
+
     </div>
 </div>

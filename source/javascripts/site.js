@@ -31,10 +31,29 @@ function showAbout() {
 
 
 
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function() {
 	const largeProjectContainer = document.getElementById("large-project-container");
+
+
 	const largeProjectContainerOverlay = document.getElementById("large-project-container-overlay");
+
+
+	const smallProjectContainerA = document.getElementById("small-project-container-a")
+	const smallProjectContainerB = document.getElementById("small-project-container-b")
+	const smallProjectContainerC = document.getElementById("small-project-container-c")
+	const smallProjectContainerD = document.getElementById("small-project-container-d")
+
+
+	const smallProjectsContainerOverlay = document.getElementById("small-projects-container-overlay")
+
+
+
+
+
+
+
+
+
 
 	largeProjectContainer.addEventListener('click', () => {
 		largeProjectContainerOverlay.classList.toggle("hidden");
