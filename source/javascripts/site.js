@@ -32,43 +32,33 @@ function showAbout() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-	const largeProjectContainer = document.getElementById("large-project-container");
+    const largeProjectContainer = document.getElementById("large-project-container");
 
+    const overlays = [
+        document.getElementById("large-project-container-overlay-a"),
+        document.getElementById("large-project-container-overlay-b"),
+        document.getElementById("large-project-container-overlay-c"),
+        document.getElementById("large-project-container-overlay-d")
+    ];
 
-	const largeProjectContainerOverlayA = document.getElementById("large-project-container-overlay-a");
-	const largeProjectContainerOverlayB = document.getElementById("large-project-container-overlay-b");
-	const largeProjectContainerOverlayC = document.getElementById("large-project-container-overlay-c");
-	const largeProjectContainerOverlayD = document.getElementById("large-project-container-overlay-d");
+    const smallProjectContainers = [
+        document.getElementById("small-project-container-a"),
+        document.getElementById("small-project-container-b"),
+        document.getElementById("small-project-container-c"),
+        document.getElementById("small-project-container-d")
+    ];
 
-	const smallProjectContainerA = document.getElementById("small-project-container-a")
-	const smallProjectContainerB = document.getElementById("small-project-container-b")
-	const smallProjectContainerC = document.getElementById("small-project-container-c")
-	const smallProjectContainerD = document.getElementById("small-project-container-d")
+    const smallProjectsContainerOverlay = document.getElementById("small-projects-container-overlay");
 
+    smallProjectContainers.forEach((container, index) => {
+        container.addEventListener("click", () => {
+            overlays.forEach(overlay => overlay.classList.add("hidden"));
+            overlays[index].classList.toggle("hidden");
+        });
+    });
 
-	const smallProjectsContainerOverlay = document.getElementById("small-projects-container-overlay")
-
-
-
-	smallProjectContainerA.addEventListener("click", () => {
-	 largeProjectContainerOverlayA.classList.toggle("hidden");
-	})
-	smallProjectContainerB.addEventListener("click", () => {
-	 largeProjectContainerOverlayB.classList.toggle("hidden");
-	})
-	smallProjectContainerC.addEventListener("click", () => {
-	 largeProjectContainerOverlayC.classList.toggle("hidden");
-	})
-	smallProjectContainerD.addEventListener("click", () => {
-	 largeProjectContainerOverlayD.classList.toggle("hidden");
-	})
-
-
-
-
-
-
-	largeProjectContainer.addEventListener('click', () => {
-		smallProjectsContainerOverlay.classList.toggle("hidden");
-	});
+    largeProjectContainer.addEventListener('click', () => {
+        smallProjectsContainerOverlay.classList.toggle("hidden");
+    });
 });
+
