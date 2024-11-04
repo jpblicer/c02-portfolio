@@ -48,10 +48,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+	smallProjectContainerA.addEventListener("click", () => {
+		smallProjectsContainerOverlay.classList.remove("hidden");
+	})
 
-
-
-
+	smallProjectsContainerOverlay.addEventListener("click", () => {
+			smallProjectsContainerOverlay.classList.add("hidden");
+})
 
 
 
