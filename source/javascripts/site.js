@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const largeProjectContainer = document.getElementById("large-project-container");
 
 
-	const largeProjectContainerOverlay = document.getElementById("large-project-container-overlay");
+	const largeProjectContainerOverlayA = document.getElementById("large-project-container-overlay-a");
 
 
 	const smallProjectContainerA = document.getElementById("small-project-container-a")
@@ -49,16 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	smallProjectContainerA.addEventListener("click", () => {
-		smallProjectsContainerOverlay.classList.remove("hidden");
+	 largeProjectContainerOverlayA.classList.toggle("hidden");
 	})
 
-	smallProjectsContainerOverlay.addEventListener("click", () => {
-			smallProjectsContainerOverlay.classList.add("hidden");
-})
-
-
-
 	largeProjectContainer.addEventListener('click', () => {
-		largeProjectContainerOverlay.classList.toggle("hidden");
+		smallProjectsContainerOverlay.classList.toggle("hidden");
 	});
 });
