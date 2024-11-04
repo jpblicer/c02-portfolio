@@ -1,36 +1,53 @@
 <div class="projects-container d-flex justify-content-evenly vh-100 align-items-center">
-    <div class="large-project-container" id="large-project-container" style="position: relative;">
-        <%= image_tag "../images/a.jpg", style: "width: 600px; height: 600px; object-fit: cover;" %>
-        <div class="project-card-overlay hidden" id="large-project-container-overlay-a" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <h3> Project Name </h3>
-          <p> Project Details </p>
-          <a href="#" style="text-decoration: none; color: black;">View Project</a>
-        </div>
+  <div class="large-project-container" id="large-project-container" style="position: relative;">
+    <%= image_tag "../images/a.jpg", style: "width: 600px; height: 600px; object-fit: cover;" %>
+
+    <div class="project-card-overlay hidden" id="large-project-container-overlay-a" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h3> Small Project A </h3>
+      <p> Project A Details </p>
+      <a href="#" style="text-decoration: none; color: black;">View Project A Github</a>
     </div>
-    <div class="small-projects-container" style="position: relative;">
-      <div class="small-projects-container-top d-flex">
-            <div class="small-project-top-left" id="small-project-container-a">
-                <%= image_tag "../images/b.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
-            </div>
-            <div class="small-project-top-right">
-                <%= image_tag "../images/c.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
-            </div>
-        </div>
-        <div class="small-projects-container-bottom d-flex">
-            <div class="small-project-bottom-left">
-                <%= image_tag "../images/d.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
-            </div>
-            <div class="small-project-bottom-right">
-                <%= image_tag "../images/e.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
-            </div>
-        </div>
-
-        <div class="project-card-overlay hidden" id="small-projects-container-overlay" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <h3> Small Projects </h3>
-          <p> Overview of Small Projects </p>
-          <a href="#" style="text-decoration: none; color: black;">View All Projects</a>
-        </div>
-
-
+    <div class="project-card-overlay hidden" id="large-project-container-overlay-b" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h3> Small Project B </h3>
+      <p> Project B Details </p>
+      <a href="#" style="text-decoration: none; color: black;">View Project B Github</a>
     </div>
+    <div class="project-card-overlay hidden" id="large-project-container-overlay-c" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h3> Small Project C </h3>
+      <p> Project C Details </p>
+      <a href="#" style="text-decoration: none; color: black;">View Project C Github</a>
+    </div>
+    <div class="project-card-overlay hidden" id="large-project-container-overlay-d" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h3> Small Project D </h3>
+      <p> Project D Details </p>
+      <a href="#" style="text-decoration: none; color: black;">View Project D Github</a>
+    </div>
+
+  </div>
+  <div class="small-projects-container" style="position: relative;">
+    <div class="small-projects-container-top d-flex">
+      <div class="small-project-top-left" id="small-project-container-a">
+        <%= image_tag "../images/b.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
+      </div>
+      <div class="small-project-top-right" id="small-project-container-b">
+        <%= image_tag "../images/c.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
+      </div>
+    </div>
+    <div class="small-projects-container-bottom d-flex">
+      <div class="small-project-bottom-left" id="small-project-container-c">
+        <%= image_tag "../images/d.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
+      </div>
+      <div class="small-project-bottom-right" id="small-project-container-d">
+        <%= image_tag "../images/e.jpg", style: "width: 300px; height: 300px; object-fit: cover;" %>
+      </div>
+    </div>
+
+    <div class="project-card-overlay hidden" id="small-projects-container-overlay" style="position: absolute; top: 0; left: 0; width: 600px; height: 600px; background-color: rgba(255, 255, 255, .8); display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h3> Large Project </h3>
+      <p> Overview of Large Project </p>
+      <a href="#" style="text-decoration: none; color: black;">View Large Project Github</a>
+    </div>
+
+
+  </div>
 </div>
