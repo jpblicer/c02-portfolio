@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-	const tabs = document.querySelectorAll('.nav-link');
+	const tabs = document.querySelectorAll('.main-nav-link');
 	const tabContent = document.getElementById('pills-tabContent');
 
 	// Set initial background color
