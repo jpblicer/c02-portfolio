@@ -1,28 +1,44 @@
 document.addEventListener("DOMContentLoaded", function() {
-	const tabs = document.querySelectorAll('.main-nav-link');
-	const tabContent = document.getElementById('pills-tabContent');
+    const tabs = document.querySelectorAll('.main-nav-link');
+    const tabContent = document.getElementById('pills-tabContent');
+    const videoBackground = document.createElement('video');
+    videoBackground.style.position = 'absolute';
+    videoBackground.style.top = 0;
+    videoBackground.style.left = 0;
+    videoBackground.style.width = '100%';
+    videoBackground.style.height = '100%';
+    videoBackground.style.objectFit = 'cover';
+    videoBackground.style.zIndex = '-1';
+    videoBackground.muted = true;
+    videoBackground.loop = true;
+    tabContent.appendChild(videoBackground);
 
-	// Set initial background color
-	tabContent.classList.add('marc-color-5'); // Using #161F99
+    // Set the initial video
+    videoBackground.src = '../images/a.mp4';
+    videoBackground.play();
 
-	tabs.forEach(tab => {
-		tab.addEventListener('click', function() {
-			// Remove existing background classes
-			tabContent.classList.remove('marc-color-1', 'marc-color-2', 'marc-color-3', 'marc-color-4', 'marc-color-5', 'marc-color-6', 'marc-color-7', 'marc-color-8', 'marc-color-9');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            videoBackground.src = '';
 
-			// Add new background class based on the active tab
-			if (this.id === 'pills-home-tab') {
-				tabContent.classList.add('marc-color-5');
-			} else if (this.id === 'pills-about-tab') {
-				tabContent.classList.add('marc-color-2');
-			} else if (this.id === 'pills-projects-tab') {
-				tabContent.classList.add('marc-color-3');
-			} else if (this.id === 'pills-services-tab') {
-				tabContent.classList.add('marc-color-4');
-			}
-		});
-	});
+            if (this.id === 'pills-home-tab') {
+                videoBackground.src = '../images/a.mp4';
+            } else if (this.id === 'pills-about-tab') {
+                videoBackground.src = '../images/b.mp4';
+            } else if (this.id === 'pills-projects-tab') {
+                videoBackground.src = '../images/c.mp4';
+            } else if (this.id === 'pills-services-tab') {
+                videoBackground.src = '../images/d.mp4';
+            }
+
+            videoBackground.load();
+            videoBackground.play();
+        });
+    });
 });
+
+
+
 
 
 function showAbout() {
