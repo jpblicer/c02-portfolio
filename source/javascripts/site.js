@@ -2,13 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const tabs = document.querySelectorAll('.main-nav-link');
     const tabContent = document.getElementById('pills-tabContent');
     const videoBackground = document.createElement('video');
-    videoBackground.style.position = 'absolute';
+    
+    // Fix the video to the viewport
+    videoBackground.style.position = 'fixed';
     videoBackground.style.top = 0;
     videoBackground.style.left = 0;
-    videoBackground.style.width = '100%';
-    videoBackground.style.height = '100%';
-    videoBackground.style.objectFit = 'cover';
-    videoBackground.style.zIndex = '-1';
+    videoBackground.style.width = '100vw';  
+    videoBackground.style.height = '100vh'; 
+    videoBackground.style.objectFit = 'cover'; 
+    videoBackground.style.zIndex = '-1'; 
     videoBackground.muted = true;
     videoBackground.loop = true;
     tabContent.appendChild(videoBackground);
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     videoBackground.src = '../images/a.mp4';
     videoBackground.play();
 
+    // Change video source based on tab clicked
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
             videoBackground.src = '';
@@ -36,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
 
 
 
